@@ -14,7 +14,7 @@ def add_with_carry(val1, val2 , carry):
     return helper, carry
         
 
-class Solution:
+class Solution: #using a class for this is weird and non-pythonic, but it was required on leetcode
     def addTwoNumbers(self, l1, l2):
         """
         :type l1: ListNode
