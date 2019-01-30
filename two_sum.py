@@ -35,4 +35,18 @@ class Solution:
                         break
                     index += 1
         return results
+    def twoSum(self, nums, target): # the hotness --> 36 ms :)
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        
+        helper_dict = {}
+        
+        for i, number in enumerate(nums):
+            search = target - number
+            if search in helper_dict:
+                return [helper_dict[search], i] #reverse order because you add it after
+            helper_dict[number] = i #add to the dictionary after searching so you dont need to loop through data twice
         
