@@ -39,7 +39,7 @@ class Solution:
         else:
             return False
         
-    def isPalindrome_simple(self, x): #256, but beautiful (could be a one liner for +4 ms)
+    def isPalindrome_simple(self, x): #256 (although once 232 for some reason...), but beautiful (could be a one liner for ~+4 ms)
         """
         :type x: int
         :rtype: bool
