@@ -19,6 +19,7 @@ class Solution:
             return self.isPalindrome(x[1:-1])
         else:
             return False
+        
     def isPalindrome_slightly_better_recursion(self, x): # 252 ms
         """
         :type x: int
@@ -37,3 +38,10 @@ class Solution:
             return self.isPalindrome(x_str[1:-1])
         else:
             return False
+        
+    def     def isPalindrome_simple(self, x): #260, but beautiful
+        """
+        :type x: int
+        :rtype: bool
+        """
+        return str(x) == str(x)[::-1]
