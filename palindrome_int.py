@@ -39,9 +39,32 @@ class Solution:
         else:
             return False
         
-    def     def isPalindrome_simple(self, x): #260, but beautiful
+    def isPalindrome_simple(self, x): #260, but beautiful
         """
         :type x: int
         :rtype: bool
         """
         return str(x) == str(x)[::-1]
+    
+    def isPalindrome(self, x, isFirst = True): #248 ms
+        """
+        :type x: int
+        :rtype: bool
+        """
+        if isFirst: #might speed it up, less use of str conversion
+            x_str = str(x)
+            x_len = len(x_str)
+        else:
+            x_str = x
+            x_len = len(x)
+        if x_len == 1:
+            return True
+        elif x_len == 2:
+            if x_str[0] == x_str[1]:
+                return True
+            else:
+                return False
+        elif x_str[0] == x_str[-1]:
+            return self.isPalindrome(x_str[1:-1], False) #kinda cheating with optional arg lol
+        else:
+            return False
