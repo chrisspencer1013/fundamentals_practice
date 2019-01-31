@@ -39,12 +39,13 @@ class Solution:
         else:
             return False
         
-    def isPalindrome_simple(self, x): #260, but beautiful
+    def isPalindrome_simple(self, x): #256, but beautiful (could be a one liner for +4 ms)
         """
         :type x: int
         :rtype: bool
         """
-        return str(x) == str(x)[::-1]
+        x = str(x)
+        return x == x[::-1]
     
     def isPalindrome(self, x, isFirst = True): #248 ms
         """
