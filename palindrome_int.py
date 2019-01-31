@@ -1,5 +1,5 @@
 class Solution:
-    def isPalindrome_bruteforce(self, x):
+    def isPalindrome_bruteforce_recursion(self, x):
         """
         :type x: int
         :rtype: bool
